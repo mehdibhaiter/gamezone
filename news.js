@@ -62,7 +62,7 @@ const newsData = {
             id: 3,
             title: "SPIDERMAN",
             video: "animation.gif 4.mp4",
-            thumbnail: "img/last.jpg",
+            thumbnail: "last.jpg",
             duration: "4:15",
             category: "sports", 
             description: "Experience football like never before with hyper-realistic graphics and physics."
@@ -71,7 +71,7 @@ const newsData = {
             id: 4,
             title: "GTA V",
             video: "animation.gif 5.mp4",
-            thumbnail: "img/téléchargement.jpg",
+            thumbnail: "téléchargement.jpg",
             duration: "5:20",
             category: "rpg",
             description: "Journey through the wild west in this epic tale of outlaws and redemption."
@@ -80,7 +80,7 @@ const newsData = {
             id: 5,
             title: "GTA",
             video: "animation.gif 6.mp4",
-            thumbnail: "img/Call Of Duty_ WWII (2017).jpg",
+            thumbnail: "Call Of Duty_ WWII (2017).jpg",
             duration: "3:10",
             category: "action",
             description: "The emotional saga continues in this stunning post-apocalyptic adventure."
@@ -89,7 +89,7 @@ const newsData = {
             id: 6, 
             title: "CYBERVERSE ONLINE",
             video: "animation.gif (1).mp4",
-            thumbnail: "img/b.jpg",
+            thumbnail: "b.jpg",
             duration: "4:45",
             category: "rpg",
             description: "Enter the digital realm in this massive multiplayer cyberpunk experience."
