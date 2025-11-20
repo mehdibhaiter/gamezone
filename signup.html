@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone - Cyber Signup</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="cyberpunk-navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo-glitch">
+                    <img src="cyber.png" alt="GameZone" class="logo-img">
+                    <span class="glitch-text">GAMEZONE</span>
+                </div>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" data-text="HOME">HOME</a>
+                <a href="store.html" class="nav-link" data-text="STORE">STORE</a>
+                <a href="news.html" class="nav-link" data-text="NEWS">NEWS</a>
+                <a href="login.html" class="nav-link" data-text="LOGIN">LOGIN</a>
+            </div>
+
+            <div class="nav-right">
+                <div class="user-section">
+                    <span class="user-welcome">JOIN THE CYBERVERSE</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Signup Page Content -->
+    <div class="auth-page">
+        <!-- Background Effects -->
+        <div class="auth-bg-effects">
+            <div class="floating-shapes"></div>
+            <div class="neon-grid"></div>
+            <div class="cyber-scan"></div>
+            <div class="binary-rain" id="binaryRain"></div>
+        </div>
+
+        <!-- Progress Indicator -->
+        <div class="signup-progress">
+            <div class="progress-steps">
+                <div class="step active" data-step="1">
+                    <span class="step-number">1</span>
+                    <span class="step-label">IDENTITY</span>
+                </div>
+                <div class="step" data-step="2">
+                    <span class="step-number">2</span>
+                    <span class="step-label">SECURITY</span>
+                </div>
+                <div class="step" data-step="3">
+                    <span class="step-number">3</span>
+                    <span class="step-label">CONFIRM</span>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <!-- Signup Container -->
+        <div class="auth-container">
+            <div class="auth-card">
+                <!-- Header -->
+                <div class="auth-header">
+                    <div class="auth-logo">
+                        <img src="cyber.png" alt="GameZone">
+                        <h1>CREATE NEURAL PROFILE</h1>
+                    </div>
+                    <p class="auth-subtitle">Forge your digital identity in the cyberverse</p>
+                </div>
+
+                <!-- Multi-step Form -->
+                <form class="auth-form" id="signupForm">
+                    <!-- Step 1: Basic Info -->
+                    <div class="form-step active" data-step="1">
+                        <div class="step-header">
+                            <h3>DIGITAL IDENTITY</h3>
+                            <p>Configure your neural presence</p>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="signupEmail">NEURAL ID</label>
+                            <input type="email" id="signupEmail" placeholder="user@cyberverse.com" required>
+                            <div class="input-icon">📧</div>
+                            <div class="input-feedback" id="emailFeedback"></div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="username">CYBER ALIAS</label>
+                            <input type="text" id="username" placeholder="CYBER_WARRIOR" required>
+                            <div class="input-icon">👤</div>
+                            <div class="input-feedback" id="usernameFeedback"></div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="cyber-btn next-btn" data-next="2">
+                                CONTINUE TO SECURITY
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Security -->
+                    <div class="form-step" data-step="2">
+                        <div class="step-header">
+                            <h3>NEURAL SECURITY</h3>
+                            <p>Encrypt your digital footprint</p>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="signupPassword">SECURITY CODE</label>
+                            <input type="password" id="signupPassword" placeholder="••••••••" required>
+                            <div class="input-icon">🔒</div>
+                            <button type="button" class="toggle-password" id="toggleSignupPassword">👁️</button>
+                            <div class="password-strength" id="passwordStrength">
+                                <div class="strength-bar"></div>
+                                <span class="strength-text">CODE STRENGTH</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="confirmPassword">CONFIRM CODE</label>
+                            <input type="password" id="confirmPassword" placeholder="••••••••" required>
+                            <div class="input-icon">🔒</div>
+                            <div class="input-feedback" id="confirmFeedback"></div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="cyber-btn prev-btn" data-prev="1">
+                                ← BACK
+                            </button>
+                            <button type="button" class="cyber-btn next-btn" data-next="3">
+                                CONTINUE TO CONFIRM
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Confirmation -->
+                    <div class="form-step" data-step="3">
+                        <div class="step-header">
+                            <h3>NEURAL CONFIRMATION</h3>
+                            <p>Finalize your cyber presence</p>
+                        </div>
+
+                        <div class="confirmation-summary">
+                            <div class="summary-item">
+                                <span class="summary-label">NEURAL ID:</span>
+                                <span class="summary-value" id="summaryEmail"></span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">CYBER ALIAS:</span>
+                                <span class="summary-value" id="summaryUsername"></span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="summary-label">SECURITY LEVEL:</span>
+                                <span class="summary-value" id="summarySecurity"></span>
+                            </div>
+                        </div>
+
+                        <div class="terms-agreement">
+                            <label class="checkbox">
+                                <input type="checkbox" id="acceptTerms" required>
+                                <span class="checkmark"></span>
+                                I ACCEPT THE <a href="#" class="terms-link">NEURAL PROTOCOL</a> AND 
+                                <a href="#" class="terms-link">DIGITAL RIGHTS AGREEMENT</a>
+                            </label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="cyber-btn prev-btn" data-prev="2">
+                                ← BACK
+                            </button>
+                            <button type="submit" class="cyber-btn auth-submit-btn">
+                                <span class="btn-content">
+                                    <span class="btn-icon">⚡</span>
+                                    ACTIVATE NEURAL PROFILE
+                                </span>
+                                <div class="btn-loading" id="signupLoading">
+                                    <div class="loading-dots"></div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Social Signup -->
+                <div class="social-signup">
+                    <div class="divider">
+                        <span>QUICK REGISTRATION</span>
+                    </div>
+                    <div class="social-buttons">
+                        <button class="social-btn google-btn" data-provider="google">
+                            <span class="social-icon">🔵</span>
+                            <span class="social-text">GOOGLE</span>
+                        </button>
+                        <button class="social-btn facebook-btn" data-provider="facebook">
+                            <span class="social-icon">🔵</span>
+                            <span class="social-text">FACEBOOK</span>
+                        </button>
+                        <button class="social-btn steam-btn" data-provider="steam">
+                            <span class="social-icon">🎮</span>
+                            <span class="social-text">STEAM</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="auth-footer">
+                    <p>ALREADY HAVE A NEURAL PROFILE? <a href="login.html" class="auth-link">ACCESS CYBERVERSE</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Security Badge -->
+        <div class="security-badge">
+            <div class="badge-icon">🛡️</div>
+            <div class="badge-text">
+                <strong>NEURAL ENCRYPTION ACTIVE</strong>
+                <span>256-bit security protocol</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="signup.js"></script>
+</body>
+</html>

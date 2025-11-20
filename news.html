@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone - Cyber News</title>
+    <link rel="stylesheet" href="news.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="cyberpunk-navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo-glitch">
+                    <img src="cyber.png" alt="GameZone" class="logo-img">
+                    <a href="index.html" class="glitch-text">GAMEZONE</a>
+                    
+                </div>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" data-text="HOME">HOME</a>
+                <a href="store.html" class="nav-link" data-text="STORE">STORE</a>
+                <a href="news.html" class="nav-link active" data-text="NEWS">NEWS</a>
+                <a href="#" class="nav-link" data-text="GAMES">GAMES</a>
+            </div>
+
+            <div class="nav-right">
+                <div class="cart-icon" id="cartIcon">
+                    🛒 <span class="cart-count">0</span>
+                </div>
+                <div class="user-section">
+                <button class="cyber-btn login-btn" onclick="window.location.href='login.html'">
+                                           LOGIN
+                </button>
+                </div>
+            </div>
+        </div>
+
+       
+
+    </nav>
+
+    <!-- News Page Content -->
+    <div id="news-page">
+        <!-- Hero Section -->
+        <div class="news-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">CYBER NEWS NETWORK</h1>
+                <p class="hero-subtitle">Where Gaming Reality Meets Virtual Insanity</p>
+                <div class="hero-stats">
+                    <span class="stat">📡 <span id="newsCount">0</span> STORIES</span>
+                    <span class="stat">🎬 <span id="videosCount">0</span> TRAILERS</span>
+                    <span class="stat">⚡ <span id="liveCount">24/7</span> COVERAGE</span>
+                </div>
+            </div>
+            <div class="hero-particles" id="heroParticles"></div>
+        </div>
+
+        <!-- Featured Video Section -->
+        <section class="featured-video-section">
+            <h2 class="section-title">🎬 FEATURED MASTERPIECE</h2>
+            <div class="featured-video-container">
+                <div class="video-player" id="featuredVideo">
+                    <video class="cyber-video" id="mainVideo" controls >
+                        <source src="animation.gif 4.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-overlay">
+                        <div class="video-info">
+                            <h3 class="video-title">ONLINE</h3>
+                            <p class="video-desc">The most anticipated game of the decade is here</p>
+                            <div class="video-meta">
+                                <span class="video-date">NEW RELEASE</span>
+                                <span class="video-duration">3:45</span>
+                            </div>
+                        </div>
+                        <div class="video-controls">
+                            <button class="cyber-btn video-control-btn" id="playBtn">▶ PLAY</button>
+                            <button class="cyber-btn video-control-btn" id="muteBtn">🔊</button>
+                            <button class="cyber-btn video-control-btn" id="fullscreenBtn">⛶</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Grid -->
+        <div class="news-container">
+            <!-- Latest News Section -->
+            <section class="news-section">
+                <h2 class="section-title">📡 BREAKING NEWS</h2>
+                <div class="news-grid" id="newsGrid">
+                    <!-- News cards will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Trailers Grid -->
+            <section class="trailers-section">
+                <h2 class="section-title">🎥 CYBER TRAILERS</h2>
+                <div class="trailers-filter">
+                    <button class="filter-btn active" data-filter="all">ALL TRAILERS</button>
+                    <button class="filter-btn" data-filter="action">ACTION</button>
+                    <button class="filter-btn" data-filter="rpg">RPG</button>
+                    <button class="filter-btn" data-filter="sports">SPORTS</button>
+                </div>
+                <div class="trailers-grid" id="trailersGrid">
+                    <!-- Trailers will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Video Wall Section -->
+            <section class="video-wall-section">
+                <h2 class="section-title">🌌 VIDEO MATRIX</h2>
+                <div class="video-wall" id="videoWall">
+                    <!-- Multiple video players -->
+                </div>
+            </section>
+        </div>
+
+        <!-- Video Modal -->
+        <div class="video-modal" id="videoModal">
+            <div class="modal-overlay" id="modalOverlay"></div>
+            <div class="modal-content">
+                <button class="close-modal" id="closeModal">✕</button>
+                <div class="modal-video-container">
+                    <video class="modal-video" id="modalVideo" controls>
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="modal-info" id="modalInfo">
+                    <!-- Video info will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="news.js"></script>
+</body>
+</html>

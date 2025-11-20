@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone - Cyber Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="cyberpunk-navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo-glitch">
+                    <img src="cyber.png" alt="GameZone" class="logo-img">
+                    <span class="glitch-text">GAMEZONE</span>
+                </div>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" data-text="HOME">HOME</a>
+                <a href="store.html" class="nav-link" data-text="STORE">STORE</a>
+                <a href="news.html" class="nav-link" data-text="NEWS">NEWS</a>
+                <a href="signup.html" class="nav-link" data-text="SIGN UP">SIGN UP</a>
+            </div>
+
+            <div class="nav-right">
+                <div class="user-section">
+                    <span class="user-welcome">WELCOME, CYBER TRAVELER</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Page Content -->
+    <div class="auth-page">
+        <!-- Background Effects -->
+        <div class="auth-bg-effects">
+            <div class="floating-shapes"></div>
+            <div class="neon-grid"></div>
+            <div class="cyber-scan"></div>
+        </div>
+
+        <!-- Login Container -->
+        <div class="auth-container">
+            <div class="auth-card">
+                <!-- Header -->
+                <div class="auth-header">
+                    <div class="auth-logo">
+                        <img src="cyber.png" alt="GameZone">
+                        <h1>ACCESS CYBERVERSE</h1>
+                    </div>
+                    <p class="auth-subtitle">Enter your neural credentials to continue your journey</p>
+                </div>
+
+                <!-- Social Login -->
+                <div class="social-login">
+                    <h3>QUICK ACCESS</h3>
+                    <div class="social-buttons">
+                        <button class="social-btn google-btn" data-provider="google">
+                            <span class="social-icon">🔵</span>
+                            <span class="social-text">GOOGLE</span>
+                        </button>
+                        <button class="social-btn facebook-btn" data-provider="facebook">
+                            <span class="social-icon">🔵</span>
+                            <span class="social-text">FACEBOOK</span>
+                        </button>
+                        <button class="social-btn steam-btn" data-provider="steam">
+                            <span class="social-icon">🎮</span>
+                            <span class="social-text">STEAM</span>
+                        </button>
+                    </div>
+                    <div class="divider">
+                        <span>OR</span>
+                    </div>
+                </div>
+
+                <!-- Login Form -->
+                <form class="auth-form" id="loginForm">
+                    <div class="input-group">
+                        <label for="loginEmail">NEURAL ID</label>
+                        <input type="email" id="loginEmail" placeholder="user@cyberverse.com" required>
+                        <div class="input-icon">📧</div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="loginPassword">SECURITY CODE</label>
+                        <input type="password" id="loginPassword" placeholder="••••••••" required>
+                        <div class="input-icon">🔒</div>
+                        <button type="button" class="toggle-password" id="toggleLoginPassword">👁️</button>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox">
+                            <input type="checkbox" id="rememberMe">
+                            <span class="checkmark"></span>
+                            REMEMBER MY NEURAL PATTERN
+                        </label>
+                        <a href="#" class="forgot-link">LOST ACCESS CODE?</a>
+                    </div>
+
+                    <button type="submit" class="cyber-btn auth-submit-btn">
+                        <span class="btn-content">
+                            <span class="btn-icon">⚡</span>
+                            INITIATE LOGIN SEQUENCE
+                        </span>
+                        <div class="btn-loading" id="loginLoading">
+                            <div class="loading-dots"></div>
+                        </div>
+                    </button>
+                </form>
+
+                <!-- Footer -->
+                <div class="auth-footer">
+                    <p>NEW TO THE CYBERVERSE? <a href="signup.html" class="auth-link">CREATE NEURAL PROFILE</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Security Badge -->
+        <div class="security-badge">
+            <div class="badge-icon">🛡️</div>
+            <div class="badge-text">
+                <strong>NEURAL SECURITY ACTIVE</strong>
+                <span>256-bit encryption</span>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone - Cyber Store</title>
+    <link rel="stylesheet" href="store.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="cyberpunk-navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo-glitch">
+                    <img src="cyber.png" alt="GameZone" class="logo-img">
+                    <span class="glitch-text">GAMEZONE</span>
+                </div>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" data-text="HOME">HOME</a>
+                <a href="store.html" class="nav-link active" data-text="STORE">STORE</a>
+                <a href="game.html" class="nav-link" data-text="GAMES">GAMES</a>
+                <a href="#" class="nav-link" data-text="NEWS">NEWS</a>
+            </div>
+
+            <div class="nav-right">
+                <div class="cart-icon" id="cartIcon">
+                    🛒 <span class="cart-count">0</span>
+                </div>
+                <div class="user-section" id="userSection">
+                   <button class="cyber-btn login-btn" onclick="window.location.href='login.html'">
+                                           LOGIN
+                </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Store Page Content -->
+    <div id="store-page">
+        <!-- نفس محتوى صفحة الـ Store لي عطيناك -->
+        <div class="page-header">
+            <h1>CYBER GALLERY</h1>
+            <div class="store-stats">
+                <span class="stat">🎮 <span id="gamesCount">0</span> GAMES</span>
+                <span class="stat">⭐ <span id="totalRating">5.0</span> RATING</span>
+            </div>
+        </div>
+
+        <div class="store-hero">
+            <div class="hero-content">
+                <h2 class="hero-title">DIGITAL ART GALLERY</h2>
+                <p class="hero-subtitle">Where Gaming Meets Artistry</p>
+            </div>
+            <div class="hero-particles" id="heroParticles"></div>
+        </div>
+
+        <div class="gallery-container">
+            <div class="gallery-filter">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">ALL REALMS</button>
+                    <button class="filter-btn" data-filter="action">ACTION</button>
+                    <button class="filter-btn" data-filter="rpg">RPG</button>
+                    <button class="filter-btn" data-filter="fps">FPS</button>
+                </div>
+                <div class="sort-options">
+                    <select class="cyber-select" id="sortSelect">
+                        <option value="featured">FEATURED</option>
+                        <option value="newest">NEWEST</option>
+                        <option value="rating">HIGHEST RATED</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- الألعاب تتحمل هنا -->
+            </div>
+
+            <div class="gallery-loading" id="galleryLoading">
+                <div class="loading-spinner"></div>
+                <span>LOADING DIGITAL REALMS...</span>
+            </div>
+        </div>
+
+        <!-- Preview Modal -->
+        <div class="preview-modal" id="previewModal">
+            <div class="modal-overlay" id="modalOverlay"></div>
+            <div class="modal-content">
+                <button class="close-preview" id="closePreview">✕</button>
+                <div class="preview-container" id="previewContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="store.js"></script>
+</body>
+</html>
